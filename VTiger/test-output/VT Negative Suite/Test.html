@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 21 19:22:31 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>200 seconds (200880 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>negative </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectCreationWithBlankFields()'><b>verifyProjectCreationWithBlankFields</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-803149788" onClick='toggleBox("Output-803149788", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-803149788" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-803149788">
+----------TC-VT-PROJ-07 passed: Blank project form validation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.VTiger.VT_Projects_Page@1ff4931d</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskSearchByPriority()'><b>verifyProjectTaskSearchByPriority</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1689262323" onClick='toggleBox("Output-1689262323", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1689262323" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1689262323">
+----------TC-VT-PT-08 passed: No matching Project Task found using the Priority filter.----------<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@65e98b1c</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithInvalidUsername()'><b>verifyLoginWithInvalidUsername</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1501716646" onClick='toggleBox("Output-1501716646", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1501716646" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1501716646">
+----------TC-VT-LOGIN-04: Invalid username test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.VTiger.VT_LoginHome_Page@752325ad</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyMilestoneCreationWithoutName()'><b>verifyMilestoneCreationWithoutName</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-958817283" onClick='toggleBox("Output-958817283", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-958817283" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-958817283">
+----------TC-VT-PM-07 passed: Empty Milestone Name validation displayed successfully----------<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@61322f9d</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskCreationWithoutTaskName()'><b>verifyProjectTaskCreationWithoutTaskName</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-35419258" onClick='toggleBox("Output-35419258", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-35419258" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-35419258">
+----------TC-VT-PT-07 passed: Validation popup displayed when Task Name was empty.----------<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@65e98b1c</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithInvalidPassword()'><b>verifyLoginWithInvalidPassword</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-344751179" onClick='toggleBox("Output-344751179", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-344751179" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-344751179">
+----------TC-VT-LOGIN-05: Invalid password test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.VTiger.VT_LoginHome_Page@752325ad</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractSearchWithDifferentSubject()'><b>verifyServiceContractSearchWithDifferentSubject</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-859725750" onClick='toggleBox("Output-859725750", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-859725750" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-859725750">
+----------TC-VT-SC-07: Nonmatching Service Contract search verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@6ad82709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyEmptyServiceContractFormValidation()'><b>verifyEmptyServiceContractFormValidation</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-714048853" onClick='toggleBox("Output-714048853", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-714048853" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-714048853">
+----------TC-VT-SC-06: Empty Service Contract form validation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@6ad82709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithBlankPassword()'><b>verifyLoginWithBlankPassword</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-2030294088" onClick='toggleBox("Output-2030294088", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2030294088" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2030294088">
+----------TC-VT-LOGIN-07: Blank password test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.VTiger.VT_LoginHome_Page@752325ad</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithBlankUsername()'><b>verifyLoginWithBlankUsername</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-605600260" onClick='toggleBox("Output-605600260", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-605600260" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-605600260">
+----------TC-VT-LOGIN-06: Blank username test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.VTiger.VT_LoginHome_Page@752325ad</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[VTiger Test Suite Started]]>
+    </line>
+    <line>
+      <![CDATA[Browser launched successfully: chrome]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Browser Closed Successfully]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-10-21T20:12:12 IST" name="Default suite" finished-at="2026-10-21T20:13:11 IST" duration-ms="59420">
+    <groups>
+      <group name="functional">
+        <method signature="VT_Projects_Page.verifyProjectCreation()[pri:1, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" name="verifyProjectCreation" class="ecom.VTiger.VT_Projects_Page"/>
+      </group> <!-- functional -->
+    </groups>
+    <test started-at="2026-10-21T20:12:12 IST" name="Default test" finished-at="2026-10-21T20:13:11 IST" duration-ms="59420">
+      <class name="ecom.VTiger.VT_Projects_Page">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:12:12 IST" name="beforeSuite" finished-at="2026-10-21T20:12:12 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VTiger Test Suite Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:12:12 IST" name="beforeTest" finished-at="2026-10-21T20:12:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:12:12 IST" name="launchBrowser" finished-at="2026-10-21T20:12:18 IST" duration-ms="5975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser launched successfully: chrome]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="LoginToWebsite(org.testng.ITestResult)[pri:0, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:12:18 IST" name="LoginToWebsite" finished-at="2026-10-21T20:12:52 IST" duration-ms="34250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=VT_Projects_Page.verifyProjectCreation()[pri:1, instance:ecom.VTiger.VT_Projects_Page@1f2586d6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginToWebsite -->
+        <test-method signature="verifyProjectCreation()[pri:1, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:12:52 IST" name="verifyProjectCreation" finished-at="2026-10-21T20:13:11 IST" duration-ms="19058" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=155.0.8059.85)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d127f22490288ab687ccb3f0a2ab2c12, getWindowHandles {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54886}, goog:processID: 21920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54886/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d127f22490288ab687ccb3f0a2ab2c12]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=155.0.8059.85)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d127f22490288ab687ccb3f0a2ab2c12, getWindowHandles {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54886}, goog:processID: 21920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54886/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d127f22490288ab687ccb3f0a2ab2c12
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandles(RemoteWebDriver.java:516)
+at VTigerPomPages.VT_Projects_Pom_Page.selectContact(VT_Projects_Pom_Page.java:375)
+at VTigerPomPages.VT_Projects_Pom_Page.createProjectFromExcel(VT_Projects_Pom_Page.java:311)
+at ecom.VTiger.VT_Projects_Page.verifyProjectCreation(VT_Projects_Page.java:18)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProjectCreation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:13:11 IST" name="closeBrowser" finished-at="2026-10-21T20:13:11 IST" duration-ms="95" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Closed Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:ecom.VTiger.VT_Projects_Page@1f2586d6]" started-at="2026-10-21T20:13:11 IST" name="AfterSuite" finished-at="2026-10-21T20:13:11 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- ecom.VTiger.VT_Projects_Page -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

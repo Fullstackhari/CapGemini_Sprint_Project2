@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VT Integration Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Functional Tests(failed)">
+    <groups>
+      <run>
+        <include name="functional"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ecom.VTiger.VT_FAQ_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="launchBrowser"/>
+          <include name="verifyFAQDeletion"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyFAQCreation"/>
+          <include name="verifyFAQMandatoryFieldValidation"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_FAQ_Page -->
+      <class name="ecom.VTiger.VT_ProjectMileStone_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="verifyProjectTaskPriorityAndProgressUpdate"/>
+          <include name="launchBrowser"/>
+          <include name="verifyProjectMilestoneCreation"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyProjectMilestoneInProjectRelatedList"/>
+          <include name="verifyProjectMilestoneDeletion"/>
+          <include name="verifyProjectStatusPriorityAndProgressUpdate"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_ProjectMileStone_Page -->
+      <class name="ecom.VTiger.VT_Projects_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="LoginToWebsite"/>
+          <include name="beforeSuite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyProjectDeletion"/>
+          <include name="verifyProjectInContactRelatedList"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_Projects_Page -->
+      <class name="ecom.VTiger.VT_ServiceContract_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyServiceContractInRelatedContact"/>
+          <include name="verifySearchAndViewServiceContract"/>
+          <include name="verifyServiceContractCreationFormNavigation"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_ServiceContract_Page -->
+      <class name="ecom.VTiger.VT_ProjectTasks_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="verifyProjectTaskDeletion"/>
+          <include name="LoginToWebsite"/>
+          <include name="beforeSuite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyProjectTaskInProjectRelatedList"/>
+          <include name="verifyProjectTaskCreation"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_ProjectTasks_Page -->
+    </classes>
+  </test> <!-- Functional Tests(failed) -->
+</suite> <!-- Failed suite [VT Integration Suite] -->

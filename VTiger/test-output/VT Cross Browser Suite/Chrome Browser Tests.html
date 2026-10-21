@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>TestNG:  Chrome Browser Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chrome Browser Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 21 12:57:10 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>83 seconds (83493 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginPageElementsVisibility()'><b>verifyLoginPageElementsVisibility</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-821724874" onClick='toggleBox("Output-821724874", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-821724874" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-821724874">
+----------TC-VT-LOGIN-02: Login page elements verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyHomePageElementsVisibility()'><b>verifyHomePageElementsVisibility</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1038966428" onClick='toggleBox("Output-1038966428", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1038966428" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1038966428">
+----------TC-VT-LOGIN-03: Home page visibility checked.----------<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithBlankUsername()'><b>verifyLoginWithBlankUsername</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1194531985" onClick='toggleBox("Output-1194531985", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1194531985" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1194531985">
+----------TC-VT-LOGIN-06: Blank username test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginSmokeTest()'><b>verifyLoginSmokeTest</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-132997880" onClick='toggleBox("Output-132997880", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-132997880" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-132997880">
+----------TC-VT-LOGIN-09: Login smoke test passed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithInvalidUsername()'><b>verifyLoginWithInvalidUsername</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-361991493" onClick='toggleBox("Output-361991493", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-361991493" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-361991493">
+----------TC-VT-LOGIN-04: Invalid username test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginToHomePageIntegration()'><b>verifyLoginToHomePageIntegration</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-177663809" onClick='toggleBox("Output-177663809", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-177663809" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-177663809">
+----------TC-VT-LOGIN-08: Login-to-home-page integration verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithBlankPassword()'><b>verifyLoginWithBlankPassword</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-192219343" onClick='toggleBox("Output-192219343", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-192219343" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-192219343">
+----------TC-VT-LOGIN-07: Blank password test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1170146916" onClick='toggleBox("Output-1170146916", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1170146916" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1170146916">
+----------TC-VT-LOGIN-01: Login with valid credentials completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithInvalidPassword()'><b>verifyLoginWithInvalidPassword</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1474755338" onClick='toggleBox("Output-1474755338", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1474755338" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1474755338">
+----------TC-VT-LOGIN-05: Invalid password test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginInputBoundaryValues()'><b>verifyLoginInputBoundaryValues</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1440139850" onClick='toggleBox("Output-1440139850", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1440139850" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1440139850">
+----------TC-VT-LOGIN-10: Login boundary values checked.----------<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.VTiger.VT_LoginHome_Page@6a78afa0</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VT Negative Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="negative"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ecom.VTiger.VT_LoginHome_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="LoginToWebsite"/>
+          <include name="beforeSuite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyLoginWithInvalidPassword"/>
+          <include name="verifyLoginWithBlankUsername"/>
+          <include name="verifyLoginWithInvalidUsername"/>
+          <include name="verifyLoginWithBlankPassword"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_LoginHome_Page -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [VT Negative Suite] -->

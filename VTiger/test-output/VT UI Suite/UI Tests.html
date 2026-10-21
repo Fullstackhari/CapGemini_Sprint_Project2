@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>TestNG:  UI Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>UI Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 21 19:55:57 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>257 seconds (257779 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>system </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQCreationSearchAndDetails()'><b>verifyFAQCreationSearchAndDetails</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-889972204" onClick='toggleBox("Output-889972204", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-889972204" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-889972204">
+----------TC-VT-FAQ-11 passed: FAQ creation, search, and details verification completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>ecom.VTiger.VT_FAQ_Page@510f3d34</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectCreationSearchAndContactIntegration()'><b>verifyProjectCreationSearchAndContactIntegration</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1925044167" onClick='toggleBox("Output-1925044167", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1925044167" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1925044167">
+TC1 passed: Project created successfully.<br/>
+TC2 passed: Project search and details verified.<br/>
+TC3 passed: Project verified in the contact's related list.<br/>
+----------TC-VT-PROJ-11 passed: Project creation, search and contact integration verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>ecom.VTiger.VT_Projects_Page@1ff4931d</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskCreationAndRelatedListIntegration()'><b>verifyProjectTaskCreationAndRelatedListIntegration</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1804292128" onClick='toggleBox("Output-1804292128", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1804292128" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1804292128">
+----------TC-VT-PT-12 passed: Project Task created and verified in the Project related list: Validation of login credentials----------<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@65e98b1c</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneEndToEndWorkflow()'><b>verifyProjectMilestoneEndToEndWorkflow</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-1451757974" onClick='toggleBox("Output-1451757974", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1451757974" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1451757974">
+ Project details updated successfully.<br/>
+TC2 passed: Project Task details updated successfully.<br/>
+TC3 passed: Project Milestone created successfully.<br/>
+----------TC-VT-PM-12 passed: Complete Project Milestone workflow verified----------<br/>
+</div>
+</td>
+<td></td>
+<td>59</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@61322f9d</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractEndToEnd()'><b>verifyServiceContractEndToEnd</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1479320034" onClick='toggleBox("Output-1479320034", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1479320034" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1479320034">
+----------TC-VT-SC-11: End-to-end Service Contract workflow verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>49</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@6ad82709</td></tr>
+</table><p>
+</body>
+</html>

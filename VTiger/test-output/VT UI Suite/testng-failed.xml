@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VT UI Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="UI Tests(failed)">
+    <groups>
+      <run>
+        <include name="system"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ecom.VTiger.VT_FAQ_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyFAQCreationSearchAndDetails"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_FAQ_Page -->
+      <class name="ecom.VTiger.VT_ProjectMileStone_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyProjectMilestoneEndToEndWorkflow"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_ProjectMileStone_Page -->
+      <class name="ecom.VTiger.VT_Projects_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="LoginToWebsite"/>
+          <include name="beforeSuite"/>
+          <include name="verifyProjectCreationSearchAndContactIntegration"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_Projects_Page -->
+      <class name="ecom.VTiger.VT_ServiceContract_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="verifyServiceContractEndToEnd"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_ServiceContract_Page -->
+    </classes>
+  </test> <!-- UI Tests(failed) -->
+</suite> <!-- Failed suite [VT UI Suite] -->

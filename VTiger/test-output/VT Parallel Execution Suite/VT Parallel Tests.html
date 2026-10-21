@@ -1,0 +1,1008 @@
+<html>
+<head>
+<title>TestNG:  VT Parallel Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>VT Parallel Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>58/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 20 18:09:11 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>297 seconds (297092 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginInputBoundaryValues()'><b>verifyLoginInputBoundaryValues</b><br>Test class: ecom.VTiger.VT_LoginHome_Page</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: unhandled inspector error: {&quot;code&quot;:-32000,&quot;message&quot;:&quot;Node with given id does not belong to the document&quot;}
+  (Session info: chrome=155.0.8059.84)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9f158dc9754d8cf76d8c312e0e0a4d4f, isElementDisplayed {id=f.1D8EA2210579661410DF7E9E909DB48F.d.07AEB4C1F6C3A88754A3971783089303.e.3668}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3815}, goog:processID: 18396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3815/devtool..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9f158dc9754d8cf76d8c312e0e0a4d4f)] -&gt; xpath: //div[@class=&apos;button&apos;]/descendant::input[@id=&apos;submitButton&apos;]]
+Session ID: 9f158dc9754d8cf76d8c312e0e0a4d4f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	at VTigerPomPages.VT_LoginHome_Pom_Page.isLoginButtonDisplayed(VT_LoginHome_Pom_Page.java:70)
+	at ecom.VTiger.VT_LoginHome_Page.verifyLoginInputBoundaryValues(VT_LoginHome_Page.java:171)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2034023272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2034023272'><pre>org.openqa.selenium.WebDriverException: unknown error: unhandled inspector error: {&quot;code&quot;:-32000,&quot;message&quot;:&quot;Node with given id does not belong to the document&quot;}
+  (Session info: chrome=155.0.8059.84)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9f158dc9754d8cf76d8c312e0e0a4d4f, isElementDisplayed {id=f.1D8EA2210579661410DF7E9E909DB48F.d.07AEB4C1F6C3A88754A3971783089303.e.3668}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3815}, goog:processID: 18396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3815/devtool..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9f158dc9754d8cf76d8c312e0e0a4d4f)] -&gt; xpath: //div[@class=&apos;button&apos;]/descendant::input[@id=&apos;submitButton&apos;]]
+Session ID: 9f158dc9754d8cf76d8c312e0e0a4d4f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	at VTigerPomPages.VT_LoginHome_Pom_Page.isLoginButtonDisplayed(VT_LoginHome_Pom_Page.java:70)
+	at ecom.VTiger.VT_LoginHome_Page.verifyLoginInputBoundaryValues(VT_LoginHome_Page.java:171)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskInProjectRelatedList()'><b>verifyProjectTaskInProjectRelatedList</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //div[@id=&apos;allMenu&apos;]//a[normalize-space()=&apos;Projects&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;allMenu&apos;]//a[normalize-space()=&apos;Projects&apos;]&quot;}.
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32157}, goog:processID: 4988, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:32157/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d9cae14c3c1717cf251598d4339ab8eb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at VTigerPomPages.VT_ProjectTasks_Pom_Page.verifyProjectTaskInProjectRelatedList(VT_ProjectTasks_Pom_Page.java:335)
+	at ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskInProjectRelatedList(VT_ProjectTasks_Page.java:32)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace30344233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace30344233'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //div[@id=&apos;allMenu&apos;]//a[normalize-space()=&apos;Projects&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;allMenu&apos;]//a[normalize-space()=&apos;Projects&apos;]&quot;}.
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32157}, goog:processID: 4988, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:32157/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d9cae14c3c1717cf251598d4339ab8eb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at VTigerPomPages.VT_ProjectTasks_Pom_Page.verifyProjectTaskInProjectRelatedList(VT_ProjectTasks_Pom_Page.java:335)
+	at ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskInProjectRelatedList(VT_ProjectTasks_Page.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>20</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneInProjectRelatedList()'><b>verifyProjectMilestoneInProjectRelatedList</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page</td>
+<td><div><pre>java.lang.AssertionError: Project Milestone was not found in the Project&apos;s related list: Resolved_Login_Issue expected [true] but found [false]
+	at ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneInProjectRelatedList(VT_ProjectMileStone_Page.java:64)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace129747117", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace129747117'><pre>java.lang.AssertionError: Project Milestone was not found in the Project&apos;s related list: Resolved_Login_Issue expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneInProjectRelatedList(VT_ProjectMileStone_Page.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>24</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifySearchAndViewServiceContract()'><b>verifySearchAndViewServiceContract</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@id=&apos;allMenu&apos;]
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33062}, goog:processID: 24124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:33062/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 15b6cdc03920c3164ceed921db267c19
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at VTigerPomPages.VT_ServiceContract_Pom_Page.clickSupportMenu(VT_ServiceContract_Pom_Page.java:129)
+	at VTigerPomPages.VT_ServiceContract_Pom_Page.navigateToServiceContracts(VT_ServiceContract_Pom_Page.java:158)
+	at VTigerPomPages.VT_ServiceContract_Pom_Page.openServiceContractList(VT_ServiceContract_Pom_Page.java:492)
+	at ecom.VTiger.VT_ServiceContract_Page.verifySearchAndViewServiceContract(VT_ServiceContract_Page.java:32)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1341437598", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1341437598'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@id=&apos;allMenu&apos;]
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\harin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33062}, goog:processID: 24124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:33062/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 15b6cdc03920c3164ceed921db267c19
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at VTigerPomPages.VT_ServiceContract_Pom_Page.clickSupportMenu(VT_ServiceContract_Pom_Page.java:129)
+	at VTigerPomPages.VT_ServiceContract_Pom_Page.navigateToServiceContracts(VT_ServiceContract_Pom_Page.java:158)
+	at VTigerPomPages.VT_ServiceContract_Pom_Page.openServiceContractList(VT_ServiceContract_Pom_Page.java:492)
+	at ecom.VTiger.VT_ServiceContract_Page.verifySearchAndViewServiceContract(VT_ServiceContract_Page.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>15</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginSmokeTest()'><b>verifyLoginSmokeTest</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-223881688" onClick='toggleBox("Output-223881688", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-223881688" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-223881688">
+----------TC-VT-LOGIN-09: Login smoke test passed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractInRelatedContact()'><b>verifyServiceContractInRelatedContact</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1901607384" onClick='toggleBox("Output-1901607384", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1901607384" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1901607384">
+----------TC-VT-SC-12: Existing Service Contract verified in the related Contact.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectProgressUpdate()'><b>verifyProjectProgressUpdate</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1976106569" onClick='toggleBox("Output-1976106569", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1976106569" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1976106569">
+----------TC-VT-PROJ-04 passed: Project progress updated to 40%.----------<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectsPageNavigation()'><b>verifyProjectsPageNavigation</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1673585346" onClick='toggleBox("Output-1673585346", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1673585346" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1673585346">
+----------TC-VT-PROJ-08 passed: Projects page navigation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQDeletion()'><b>verifyFAQDeletion</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-1149462272" onClick='toggleBox("Output-1149462272", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1149462272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1149462272">
+----------TC-VT-FAQ-03 passed: FAQ deletion verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskCreation()'><b>verifyProjectTaskCreation</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1249382270" onClick='toggleBox("Output-1249382270", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1249382270" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1249382270">
+----------TC-VT-PT-01 passed: Project Task created and verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractListNavigation()'><b>verifyServiceContractListNavigation</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-764020359" onClick='toggleBox("Output-764020359", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-764020359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-764020359">
+----------TC-VT-SC-08: Service Contract list navigation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractEndToEnd()'><b>verifyServiceContractEndToEnd</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1082301583" onClick='toggleBox("Output-1082301583", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1082301583" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1082301583">
+----------TC-VT-SC-11: End-to-end Service Contract workflow verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyEditAndDeleteServiceContract()'><b>verifyEditAndDeleteServiceContract</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1517761145" onClick='toggleBox("Output-1517761145", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1517761145" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1517761145">
+----------TC-VT-SC-03 passed: Newly created Service Contract deleted and verified absent: Customer Portal Support Aggrement - TC03 - 1792500123770----------<br/>
+</div>
+</td>
+<td></td>
+<td>29</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithBlankPassword()'><b>verifyLoginWithBlankPassword</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1693804516" onClick='toggleBox("Output-1693804516", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1693804516" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1693804516">
+----------TC-VT-LOGIN-07: Blank password test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectDetailsEntryWithoutSaving()'><b>verifyProjectDetailsEntryWithoutSaving</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-491140951" onClick='toggleBox("Output-491140951", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-491140951" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-491140951">
+----------TC-VT-PROJ-10 passed: Project details entered without saving.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQSearchByQuestion()'><b>verifyFAQSearchByQuestion</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-2024175667" onClick='toggleBox("Output-2024175667", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2024175667" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2024175667">
+----------TC-VT-FAQ-02 passed: Original FAQ question verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectInContactRelatedList()'><b>verifyProjectInContactRelatedList</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-790630837" onClick='toggleBox("Output-790630837", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-790630837" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-790630837">
+----------TC-VT-PROJ-03 passed: Project verified in Contact's related list.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyMilestoneCreationWithoutName()'><b>verifyMilestoneCreationWithoutName</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-509383881" onClick='toggleBox("Output-509383881", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-509383881" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-509383881">
+----------TC-VT-PM-07 passed: Empty Milestone Name validation displayed successfully----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyBasicServiceContractCreation()'><b>verifyBasicServiceContractCreation</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1620461952" onClick='toggleBox("Output-1620461952", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1620461952" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1620461952">
+----------TC-VT-SC-10: Existing Service Contract subject verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskDetailsCanBeEntered()'><b>verifyProjectTaskDetailsCanBeEntered</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-272300578" onClick='toggleBox("Output-272300578", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-272300578" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-272300578">
+----------TC-VT-PT-11 passed: All Project Task details entered without saving.----------<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectDeletion()'><b>verifyProjectDeletion</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1837273113" onClick='toggleBox("Output-1837273113", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1837273113" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1837273113">
+----------TC-VT-PROJ-05 passed: Project deleted and deletion verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQFormFieldsVisibility()'><b>verifyFAQFormFieldsVisibility</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-187692210" onClick='toggleBox("Output-187692210", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-187692210" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-187692210">
+----------TC-VT-FAQ-04 passed: FAQ form fields are visible.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginPageElementsVisibility()'><b>verifyLoginPageElementsVisibility</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-233566923" onClick='toggleBox("Output-233566923", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-233566923" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-233566923">
+----------TC-VT-LOGIN-02: Login page elements verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectCreationWithBlankFields()'><b>verifyProjectCreationWithBlankFields</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1742221304" onClick='toggleBox("Output-1742221304", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1742221304" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1742221304">
+----------TC-VT-PROJ-07 passed: Blank project form validation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTasksPageNavigation()'><b>verifyProjectTasksPageNavigation</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1348109690" onClick='toggleBox("Output-1348109690", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1348109690" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1348109690">
+----------TC-VT-PT-09 passed: Project Tasks page navigation verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithInvalidUsername()'><b>verifyLoginWithInvalidUsername</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-302781997" onClick='toggleBox("Output-302781997", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-302781997" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-302781997">
+----------TC-VT-LOGIN-04: Invalid username test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginToHomePageIntegration()'><b>verifyLoginToHomePageIntegration</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-651565559" onClick='toggleBox("Output-651565559", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-651565559" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-651565559">
+----------TC-VT-LOGIN-08: Login-to-home-page integration verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskCreationWithoutTaskName()'><b>verifyProjectTaskCreationWithoutTaskName</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1723176976" onClick='toggleBox("Output-1723176976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1723176976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1723176976">
+----------TC-VT-PT-07 passed: Validation popup displayed when Task Name was empty.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQMandatoryFieldValidation()'><b>verifyFAQMandatoryFieldValidation</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-1176617350" onClick='toggleBox("Output-1176617350", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1176617350" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1176617350">
+----------TC-VT-FAQ-06 passed: Mandatory-field validation displayed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyHomePageElementsVisibility()'><b>verifyHomePageElementsVisibility</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-1825491298" onClick='toggleBox("Output-1825491298", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1825491298" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1825491298">
+----------TC-VT-LOGIN-03: Home page visibility checked.----------<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithBlankUsername()'><b>verifyLoginWithBlankUsername</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-681078452" onClick='toggleBox("Output-681078452", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-681078452" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-681078452">
+----------TC-VT-LOGIN-06: Blank username test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneCreation()'><b>verifyProjectMilestoneCreation</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-254715264" onClick='toggleBox("Output-254715264", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-254715264" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-254715264">
+----------TC-VT-PM-03 passed: Project Milestone created successfully: Resolved_Login_Issue----------<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyCreatingNewProjectPage()'><b>verifyCreatingNewProjectPage</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-41187526" onClick='toggleBox("Output-41187526", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-41187526" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-41187526">
+----------TC-VT-PROJ-09 passed: Creating New Project page verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskDeletion()'><b>verifyProjectTaskDeletion</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1317433779" onClick='toggleBox("Output-1317433779", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1317433779" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1317433779">
+----------TC-VT-PT-03 passed: Project Task deleted and verified absent: Validation of login credentials----------<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractCreationFormNavigation()'><b>verifyServiceContractCreationFormNavigation</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-651151994" onClick='toggleBox("Output-651151994", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-651151994" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-651151994">
+----------TC-VT-SC-01: Service Contract created, saved, and verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneDetailsCanBeEnteredWithoutSaving()'><b>verifyProjectMilestoneDetailsCanBeEnteredWithoutSaving</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-246873345" onClick='toggleBox("Output-246873345", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-246873345" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-246873345">
+----------TC-VT-PM-11 passed: Milestone details entered without saving----------<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractsMenuVisibility()'><b>verifyServiceContractsMenuVisibility</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-511395788" onClick='toggleBox("Output-511395788", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-511395788" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-511395788">
+----------TC-VT-SC-05: Service Contracts menu visibility verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectStatusPriorityAndProgressUpdate()'><b>verifyProjectStatusPriorityAndProgressUpdate</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-206264" onClick='toggleBox("Output-206264", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-206264" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-206264">
+----------TC-VT-PM-01 passed: Project Status, Priority, and Progress updated successfully. Progress: 100%----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQOptionVisibilityUnderMore()'><b>verifyFAQOptionVisibilityUnderMore</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-1620425642" onClick='toggleBox("Output-1620425642", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1620425642" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1620425642">
+----------TC-VT-FAQ-05 passed: FAQ option is visible under More.----------<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyAddButtonOpensCreatingNewFAQPage()'><b>verifyAddButtonOpensCreatingNewFAQPage</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-102997020" onClick='toggleBox("Output-102997020", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-102997020" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-102997020">
+----------TC-VT-FAQ-09 passed: + button opens the Creating New FAQ page.----------<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectCreation()'><b>verifyProjectCreation</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-644425897" onClick='toggleBox("Output-644425897", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-644425897" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-644425897">
+----------TC-VT-PROJ-01: Project created and verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectTaskPriorityAndProgressUpdate()'><b>verifyProjectTaskPriorityAndProgressUpdate</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-799651176" onClick='toggleBox("Output-799651176", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-799651176" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-799651176">
+----------TC-VT-PM-02 passed: Project Task Priority and Progress updated successfully. Progress: 100%----------<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneEndToEndWorkflow()'><b>verifyProjectMilestoneEndToEndWorkflow</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-1497748998" onClick='toggleBox("Output-1497748998", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1497748998" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1497748998">
+ Project details updated successfully.<br/>
+TC2 passed: Project Task details updated successfully.<br/>
+TC3 passed: Project Milestone created successfully.<br/>
+----------TC-VT-PM-12 passed: Complete Project Milestone workflow verified----------<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskSearchByPriority()'><b>verifyProjectTaskSearchByPriority</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-575864066" onClick='toggleBox("Output-575864066", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-575864066" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-575864066">
+----------TC-VT-PT-08 passed: No matching Project Task found using the Priority filter.----------<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskCreationAndRelatedListIntegration()'><b>verifyProjectTaskCreationAndRelatedListIntegration</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-270473804" onClick='toggleBox("Output-270473804", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-270473804" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-270473804">
+----------TC-VT-PT-12 passed: Project Task created and verified in the Project related list: Validation of login credentials----------<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyProjectMilestoneDeletion()'><b>verifyProjectMilestoneDeletion</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-761377973" onClick='toggleBox("Output-761377973", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-761377973" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-761377973">
+----------TC-VT-PM-05 passed: Project Milestone deleted successfully: Resolved_Login_Issue----------<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractFormFieldsVisibility()'><b>verifyServiceContractFormFieldsVisibility</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1508172080" onClick='toggleBox("Output-1508172080", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1508172080" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1508172080">
+----------TC-VT-SC-04: Service Contract form field visibility verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQCreation()'><b>verifyFAQCreation</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-379423179" onClick='toggleBox("Output-379423179", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-379423179" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-379423179">
+----------TC-VT-FAQ-01: FAQ created and verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithInvalidPassword()'><b>verifyLoginWithInvalidPassword</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-544069306" onClick='toggleBox("Output-544069306", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-544069306" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-544069306">
+----------TC-VT-LOGIN-05: Invalid password test completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQCreationSearchAndDetails()'><b>verifyFAQCreationSearchAndDetails</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-660901053" onClick='toggleBox("Output-660901053", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-660901053" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-660901053">
+----------TC-VT-FAQ-11 passed: FAQ creation, search, and details verification completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyEmptyServiceContractFormValidation()'><b>verifyEmptyServiceContractFormValidation</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-812659349" onClick='toggleBox("Output-812659349", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-812659349" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-812659349">
+----------TC-VT-SC-06: Empty Service Contract form validation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyCreateProjectMilestoneFormHeading()'><b>verifyCreateProjectMilestoneFormHeading</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-1548564907" onClick='toggleBox("Output-1548564907", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1548564907" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1548564907">
+----------TC-VT-PM-10 passed: Creating New Project Milestone heading displayed successfully----------<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyAddButtonOpensNewContractForm()'><b>verifyAddButtonOpensNewContractForm</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-133547154" onClick='toggleBox("Output-133547154", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-133547154" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-133547154">
+----------TC-VT-SC-09: Add button navigation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyProjectTaskFieldsDisplayed()'><b>verifyProjectTaskFieldsDisplayed</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-966035581" onClick='toggleBox("Output-966035581", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-966035581" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-966035581">
+----------TC-VT-PT-05 passed: All Project Task fields are displayed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_FAQ_Page.verifyFAQPageNavigation()'><b>verifyFAQPageNavigation</b><br>Test class: ecom.VTiger.VT_FAQ_Page<br/>
+<a href="#Output-1183856253" onClick='toggleBox("Output-1183856253", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1183856253" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1183856253">
+----------TC-VT-FAQ-08 passed: FAQ page navigation verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.VTiger.VT_FAQ_Page@2aceadd4</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectMileStone_Page.verifyAllProjectMilestoneFieldsAreVisible()'><b>verifyAllProjectMilestoneFieldsAreVisible</b><br>Test class: ecom.VTiger.VT_ProjectMileStone_Page<br/>
+<a href="#Output-893036500" onClick='toggleBox("Output-893036500", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-893036500" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-893036500">
+----------TC-VT-PM-06 passed: All Project Milestone form fields are visible----------<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecom.VTiger.VT_ProjectMileStone_Page@7a8c8dcf</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectSearchByName()'><b>verifyProjectSearchByName</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1503391976" onClick='toggleBox("Output-1503391976", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1503391976" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1503391976">
+----------TC-VT-PROJ-02: Project search verified successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectCreationSearchAndContactIntegration()'><b>verifyProjectCreationSearchAndContactIntegration</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-1605663559" onClick='toggleBox("Output-1605663559", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1605663559" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1605663559">
+TC1 passed: Project created successfully.<br/>
+TC2 passed: Project search and details verified.<br/>
+TC3 passed: Project verified in the contact's related list.<br/>
+----------TC-VT-PROJ-11 passed: Project creation, search and contact integration verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ProjectTasks_Page.verifyCreateProjectTaskPageNavigation()'><b>verifyCreateProjectTaskPageNavigation</b><br>Test class: ecom.VTiger.VT_ProjectTasks_Page<br/>
+<a href="#Output-1397215411" onClick='toggleBox("Output-1397215411", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1397215411" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1397215411">
+----------TC-VT-PT-10 passed: Creating New Project Task page displayed successfully.----------<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>ecom.VTiger.VT_ProjectTasks_Page@5dda768f</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_LoginHome_Page.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: ecom.VTiger.VT_LoginHome_Page<br/>
+<a href="#Output-52784083" onClick='toggleBox("Output-52784083", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-52784083" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-52784083">
+----------TC-VT-LOGIN-01: Login with valid credentials completed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>ecom.VTiger.VT_LoginHome_Page@367ffa75</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_ServiceContract_Page.verifyServiceContractSearchWithDifferentSubject()'><b>verifyServiceContractSearchWithDifferentSubject</b><br>Test class: ecom.VTiger.VT_ServiceContract_Page<br/>
+<a href="#Output-1908499512" onClick='toggleBox("Output-1908499512", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1908499512" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1908499512">
+----------TC-VT-SC-07: Nonmatching Service Contract search verified.----------<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>ecom.VTiger.VT_ServiceContract_Page@24269709</td></tr>
+<tr>
+<td title='ecom.VTiger.VT_Projects_Page.verifyProjectCreationFieldsDisplayed()'><b>verifyProjectCreationFieldsDisplayed</b><br>Test class: ecom.VTiger.VT_Projects_Page<br/>
+<a href="#Output-429641824" onClick='toggleBox("Output-429641824", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-429641824" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-429641824">
+----------TC-VT-PROJ-06 passed: All project fields are displayed.----------<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>ecom.VTiger.VT_Projects_Page@1ce24091</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VT Batch Execution Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="VT Batch Tests(failed)">
+    <classes>
+      <class name="ecom.VTiger.VT_ServiceContract_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="LoginToWebsite"/>
+          <include name="beforeSuite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyServiceContractsMenuVisibility"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_ServiceContract_Page -->
+      <class name="ecom.VTiger.VT_LoginHome_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="launchBrowser"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyLoginInputBoundaryValues"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_LoginHome_Page -->
+    </classes>
+  </test> <!-- VT Batch Tests(failed) -->
+</suite> <!-- Failed suite [VT Batch Execution Suite] -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="classes" name="Failed suite [VT Parallel Execution Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="classes" name="VT Tests(failed)">
+    <classes>
+      <class name="ecom.VTiger.VT_Projects_Page">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+          <include name="LoginToWebsite"/>
+          <include name="verifyProjectCreationSearchAndContactIntegration"/>
+          <include name="launchBrowser"/>
+          <include name="verifyCreatingNewProjectPage"/>
+          <include name="beforeTest"/>
+          <include name="AfterSuite"/>
+          <include name="verifyProjectCreationFieldsDisplayed"/>
+          <include name="verifyProjectsPageNavigation"/>
+          <include name="verifyProjectCreationWithBlankFields"/>
+          <include name="verifyProjectDetailsEntryWithoutSaving"/>
+        </methods>
+      </class> <!-- ecom.VTiger.VT_Projects_Page -->
+    </classes>
+  </test> <!-- VT Tests(failed) -->
+</suite> <!-- Failed suite [VT Parallel Execution Suite] -->
