@@ -330,52 +330,96 @@ public class VT_ServiceContract_Pom_Page {
 
 
 	public void openContact(String subject) throws Exception {
-	
+
 	    String[] data = readServiceContractData();
-	    String contactName = data[5];
-	
+	    String contactName = data[5].trim();
+
 	    // Open Contacts
 	    By contactsLink = By.xpath("//a[normalize-space()='Contacts']");
 	    wait.until(ExpectedConditions.elementToBeClickable(contactsLink)).click();
-	
-	    
-	    // Find the visible Contact link and click it
-	    By contactLink = By.xpath("//a[normalize-space()='" + contactName +"' and contains(@href,'module=Contacts')]" );
-	    wait.until(driver ->driver.findElements(contactLink).stream().anyMatch(element ->element.isDisplayed() && element.isEnabled()));
-	    WebElement visibleContact = driver.findElements(contactLink).stream().filter(element ->element.isDisplayed() && element.isEnabled()).findFirst().orElseThrow(() ->new NoSuchElementException("" + contactName));
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",visibleContact);
+
+	    // Search Contacts using Last Name
+	    By searchDropdown = By.id("bas_searchfield");
+	    WebElement dropdown = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(searchDropdown));
+
+	    new Select(dropdown).selectByVisibleText("Last Name");
+
+	    By searchInput = By.name("search_text");
+	    WebElement searchBox = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(searchInput));
+
+	    searchBox.clear();
+	    searchBox.sendKeys(contactName);
+
+	    // Click Search Now
+	    By searchButton = By.xpath(
+	            "//input[@name='submit' or @value='Search Now']");
+
+	    wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+
+	    // Find and click the matching Contact
+	    By contactLink = By.xpath(
+	            "//a[contains(@href,'module=Contacts')" +
+	            " and contains(@href,'action=DetailView')" +
+	            " and normalize-space(.)='" + contactName + "']");
+
+	    WebElement visibleContact = wait.until(
+	            ExpectedConditions.elementToBeClickable(contactLink));
+
+	    ((JavascriptExecutor) driver).executeScript(
+	            "arguments[0].scrollIntoView({block:'center'});", visibleContact);
+
 	    visibleContact.click();
-	    
+
 	    // Open More Information tab
-	    By moreInformationTab = By.xpath("//a[normalize-space()='More Information']");
+	    By moreInformationTab = By.xpath(
+	            "//a[normalize-space()='More Information']");
+
 	    wait.until(ExpectedConditions.elementToBeClickable(moreInformationTab)).click();
-	    
+
 	    // Expand the Service Contracts related list
-	    By serviceContractsLink = By.xpath("//a[contains(@href,'tbl_Contacts_ServiceContracts') " +"and contains(@href,'Contacts_ServiceContracts')]");
-	    WebElement serviceContractsHeader = wait.until(ExpectedConditions.presenceOfElementLocated(serviceContractsLink));
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",serviceContractsHeader);
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();",serviceContractsHeader);
-	    
+	    By serviceContractsLink = By.xpath(
+	            "//a[contains(@href,'tbl_Contacts_ServiceContracts') " +
+	            "and contains(@href,'Contacts_ServiceContracts')]");
+
+	    WebElement serviceContractsHeader = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(serviceContractsLink));
+
+	    ((JavascriptExecutor) driver).executeScript(
+	            "arguments[0].scrollIntoView({block:'center'});",
+	            serviceContractsHeader);
+
+	    ((JavascriptExecutor) driver).executeScript(
+	            "arguments[0].click();", serviceContractsHeader);
+
 	    // Wait until the related-list section is available
-	    By relatedContractsSection = By.xpath("//*[@id='tbl_Contacts_ServiceContracts']");
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(relatedContractsSection));
-	    
+	    By relatedContractsSection = By.id("tbl_Contacts_ServiceContracts");
+
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(
+	            relatedContractsSection));
+
 	    // Verify the Service Contract in the Contact's related list
 	    By contractLink = By.xpath(
 	            "//a[contains(@href,'module=ServiceContracts')" +
 	            " and contains(@href,'action=DetailView')" +
 	            " and contains(normalize-space(.),'Customer Portal Support')]");
-	
+
 	    List<WebElement> contractLinks = wait.until(driver -> {
 	        List<WebElement> links = driver.findElements(contractLink);
-	
-	        return links.stream().anyMatch(WebElement::isDisplayed)
-	                ? links : null;
+	        return links.stream().anyMatch(WebElement::isDisplayed) ? links : null;
 	    });
-	
-	    boolean isVerified = contractLinks.stream().anyMatch(link ->link.isDisplayed()&& link.getText().contains("Customer Portal Support"));
-	    Assert.assertTrue(isVerified,"Service Contract was not found in the Contact's related list.");
-	    System.out.println("Service Contract verified in Contact's related list.");
+
+	    boolean isVerified = contractLinks.stream().anyMatch(
+	            link -> link.isDisplayed()
+	                    && link.getText().contains("Customer Portal Support"));
+
+	    Assert.assertTrue(
+	            isVerified,
+	            "Service Contract was not found in the Contact's related list.");
+
+	    System.out.println(
+	            "Service Contract verified in Contact's related list.");
 	}
 
 
@@ -631,6 +675,115 @@ public class VT_ServiceContract_Pom_Page {
     
     public String[] readServiceContractDataForVerification() throws Exception {
         return readServiceContractData();
+    }
+    
+    public void searchContactByLastName() throws Exception {
+
+        String[] data = readServiceContractData();
+        String contactName = data[5].trim();
+
+        // Open Contacts
+        By contactsLink = By.xpath("//a[normalize-space()='Contacts']");
+        wait.until(ExpectedConditions.elementToBeClickable(contactsLink)).click();
+
+        // Search Contacts using Last Name
+        By searchDropdown = By.id("bas_searchfield");
+        WebElement dropdown = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(searchDropdown));
+
+        new Select(dropdown).selectByVisibleText("Last Name");
+
+        By searchInput = By.name("search_text");
+        WebElement searchBox = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(searchInput));
+
+        searchBox.clear();
+        searchBox.sendKeys(contactName);
+
+        // Click Search Now
+        By searchButton = By.xpath(
+                "//input[@name='submit' or @value='Search Now']");
+
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+
+        System.out.println("Contacts filtered by Last Name: " + contactName);
+    }
+    
+    public void clickFilteredContactAndVerifyServiceContract() throws Exception {
+
+        String[] data = readServiceContractData();
+        String contactName = data[5].trim();
+
+        // Find and click the filtered Contact
+        By contactLink = By.xpath(
+                "//a[contains(@href,'module=Contacts')" +
+                " and contains(@href,'action=DetailView')" +
+                " and normalize-space(.)='" + contactName + "']");
+
+        WebElement visibleContact = wait.until(driver ->
+                driver.findElements(contactLink).stream()
+                        .filter(element -> element.isDisplayed() && element.isEnabled())
+                        .findFirst()
+                        .orElse(null));
+
+        if (visibleContact == null) {
+            throw new NoSuchElementException(
+                    "Filtered contact not found: " + contactName);
+        }
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block:'center'});", visibleContact);
+
+        wait.until(ExpectedConditions.elementToBeClickable(visibleContact)).click();
+
+        // Open More Information tab
+        By moreInformationTab = By.xpath(
+                "//a[normalize-space()='More Information']");
+
+        wait.until(ExpectedConditions.elementToBeClickable(moreInformationTab)).click();
+
+        // Expand the Service Contracts related list
+        By serviceContractsLink = By.xpath(
+                "//a[contains(@href,'tbl_Contacts_ServiceContracts') " +
+                "and contains(@href,'Contacts_ServiceContracts')]");
+
+        WebElement serviceContractsHeader = wait.until(
+                ExpectedConditions.presenceOfElementLocated(serviceContractsLink));
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block:'center'});",
+                serviceContractsHeader);
+
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].click();", serviceContractsHeader);
+
+        // Wait for the related-list section
+        By relatedContractsSection = By.id("tbl_Contacts_ServiceContracts");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                relatedContractsSection));
+
+        // Verify the Service Contract
+        By contractLink = By.xpath(
+                "//a[contains(@href,'module=ServiceContracts')" +
+                " and contains(@href,'action=DetailView')" +
+                " and contains(normalize-space(.),'Customer Portal Support')]");
+
+        List<WebElement> contractLinks = wait.until(driver -> {
+            List<WebElement> links = driver.findElements(contractLink);
+            return links.stream().anyMatch(WebElement::isDisplayed) ? links : null;
+        });
+
+        boolean isVerified = contractLinks.stream().anyMatch(
+                link -> link.isDisplayed()
+                        && link.getText().contains("Customer Portal Support"));
+
+        Assert.assertTrue(
+                isVerified,
+                "Service Contract was not found in the Contact's related list.");
+
+        System.out.println(
+                "Service Contract verified in Contact's related list.");
     }
 
 
