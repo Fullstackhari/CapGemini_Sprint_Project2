@@ -129,22 +129,36 @@ public class VT_FAQ_Page extends VTBaseClass {
 	
 	
 
-	// TC-VT-FAQ-11: System test for FAQ creation, search, and details verification.
-	@Test(priority=8,groups = {"system"})
+	// TC-VT-FAQ-09: FAQ End to End Testing
+	@Test(priority = 8, groups = {"system"})
 	public void verifyFAQCreationSearchAndDetails() throws Exception {
-
+	
 	    VT_FAQ_Pom_Page faqPage = new VT_FAQ_Pom_Page(driver);
-
+	
 	    String question = faqPage.createFAQFromExcel();
-
+	    System.out.println("FAQ question created: " + question);
+	
 	    faqPage.navigateToFAQList();
 	    faqPage.searchFAQByQuestion(question);
+	    System.out.println("Searched FAQ question: " + question);
+	
 	    faqPage.clickFilteredFAQQuestion();
 	    Thread.sleep(1000);
-	    Assert.assertEquals(faqPage.getDisplayedQuestion(),question,"FAQ details do not match the question that was created.");
-
-	    Reporter.log("----------TC-VT-FAQ-11 passed: FAQ creation, search, and details verification completed.----------",true);
+	
+	    String actualQuestion = faqPage.getDisplayedQuestion();
+	    System.out.println("FAQ question displayed in details: " + actualQuestion);
+	
+	    Assert.assertEquals(
+	            actualQuestion.trim(),
+	            question.trim(),
+	            "FAQ details do not match the question that was created."
+	    );
+	
+	    Reporter.log(
+	            "----------TC-VT-FAQ-11 passed: FAQ creation, search, and details verification completed.----------",
+	            true);
 	}
+
 
 
 }
