@@ -158,7 +158,7 @@ public class VT_ServiceContract_Page extends VTBaseClass {
 	    serviceContractPage.openServiceContractList();
 	    serviceContractPage.searchContractBySubject(subject);
 	    serviceContractPage.clickFilteredContractSubject(subject);
-	
+	    Thread.sleep(1000);
 	    Assert.assertEquals(serviceContractPage.getDisplayedSubject(),subject,"Service Contract subject does not match.");
 	
 	    serviceContractPage.openContact(subject);
@@ -172,15 +172,12 @@ public class VT_ServiceContract_Page extends VTBaseClass {
 	@Test(priority = 12, groups = {"functional"})
 	public void verifyServiceContractInRelatedContact() throws Exception {
 
-	    VT_ServiceContract_Pom_Page serviceContractPage =
-	            new VT_ServiceContract_Pom_Page(driver);
+	    VT_ServiceContract_Pom_Page serviceContractPage = new VT_ServiceContract_Pom_Page(driver);
 
-	    String[] data = serviceContractPage.readServiceContractDataForVerification();
-	    String subject = data[0];
+	    serviceContractPage.searchContactByLastName();
 
-	    serviceContractPage.openContact(subject);
+	    serviceContractPage.clickFilteredContactAndVerifyServiceContract();
 
-	    Assert.assertTrue(serviceContractPage.isRelatedContractListed(subject),"Service Contract was not found in the related Contact.");
-	    Reporter.log("----------TC-VT-SC-12: Existing Service Contract verified in the related Contact.----------",true);
+	    Reporter.log("----------TC-VT-SC-12: Existing Service Contract verified in the related Contact.----------", true);
 	}
 }
