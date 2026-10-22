@@ -181,18 +181,18 @@ public class VT_Projects_Page extends VTBaseClass {
 
 	    Assert.assertTrue(projectPage.isProjectDisplayed(projectName),"TC1 failed: Project was not created: " + projectName);
 
-	    Reporter.log("TC1 passed: Project created successfully.",true);
+	    Reporter.log("Project created successfully.",true);
 	    projectPage.navigateToProjectsList();
 	    projectPage.searchProjectByName(projectName);
 	    projectPage.clickFilteredProduct();
 	    Thread.sleep(1000);
 	    Assert.assertEquals(projectPage.isProjectSearchResultDisplayed(),projectName,"TC2 failed: Project details do not match.");
 
-	    Reporter.log("TC2 passed: Project search and details verified.",true);
+	    Reporter.log("Project search and details verified.",true);
 
 	    projectPage.verifyProjectInContactRelatedList();
 
-	    Reporter.log("TC3 passed: Project verified in the contact's related list.",true);
+	    Reporter.log("Project verified in the contact's related list.",true);
 
 	    Reporter.log("----------TC-VT-PROJ-11 passed: Project creation, search and contact integration verified.----------",true);
 	}
