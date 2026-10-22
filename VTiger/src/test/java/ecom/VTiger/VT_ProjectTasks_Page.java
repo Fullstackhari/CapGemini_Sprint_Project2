@@ -101,6 +101,7 @@ public class VT_ProjectTasks_Page extends VTBaseClass {
 
         taskPage.navigateToProjectTasks();
         taskPage.searchProjectTaskByPriority(taskName);
+        Thread.sleep(1000);
         Assert.assertTrue(taskPage.isProjectTaskSearchResultAbsent(taskName),"Project Task was found when searching by Priority using the task name." );
         Reporter.log("----------TC-VT-PT-08 passed: No matching Project Task found using the Priority filter.----------",true);
     }
@@ -111,6 +112,7 @@ public class VT_ProjectTasks_Page extends VTBaseClass {
     public void verifyProjectTasksPageNavigation() throws Exception {
         VT_ProjectTasks_Pom_Page taskPage = new VT_ProjectTasks_Pom_Page(driver);
         taskPage.navigateToProjectTasks();
+        Thread.sleep(1000);
         Assert.assertTrue(taskPage.isProjectTasksPageDisplayed(),"Project Tasks page is not displayed.");
         Reporter.log("----------TC-VT-PT-09 passed: Project Tasks page navigation verified successfully.----------",true);
     }
@@ -122,6 +124,7 @@ public class VT_ProjectTasks_Page extends VTBaseClass {
         VT_ProjectTasks_Pom_Page taskPage = new VT_ProjectTasks_Pom_Page(driver);
         taskPage.navigateToProjectTasks();
         taskPage.clickAddTask();
+        Thread.sleep(1000);
         Assert.assertTrue(taskPage.isCreateProjectTaskPageDisplayed(),"Creating New Project Task page is not displayed.");
         Reporter.log("----------TC-VT-PT-10 passed: Creating New Project Task page displayed successfully.----------",true);
     }
