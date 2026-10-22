@@ -185,6 +185,7 @@ public class VT_Projects_Page extends VTBaseClass {
 	    projectPage.navigateToProjectsList();
 	    projectPage.searchProjectByName(projectName);
 	    projectPage.clickFilteredProduct();
+	    Thread.sleep(1000);
 	    Assert.assertEquals(projectPage.isProjectSearchResultDisplayed(),projectName,"TC2 failed: Project details do not match.");
 
 	    Reporter.log("TC2 passed: Project search and details verified.",true);
