@@ -379,63 +379,81 @@ public class VT_Projects_Pom_Page {
 	}
 	
 
+
 	public void verifyProjectInContactRelatedList() throws Exception {
 	
 	    String[] data = readProjectDataFromExcel();
-	    String projectName = data[0];
-	    String contactName = data[5];
+	    String projectName = data[0].trim();
+	    String contactName = data[5].trim();
 	
 	    // Open Contacts
 	    By contactsLink = By.xpath("//a[normalize-space()='Contacts']");
 	    wait.until(ExpectedConditions.elementToBeClickable(contactsLink)).click();
 	
-	    // Find and click the contact
-	    By contactLink = By.xpath("//a[normalize-space()='" + contactName +"' and contains(@href,'module=Contacts')]");
+	    // Search Contacts by Last Name
+	    By searchDropdown = By.id("bas_searchfield");
+	    WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(searchDropdown));
+	    new Select(dropdown).selectByVisibleText("Last Name");
 	
-	    wait.until(driver -> driver.findElements(contactLink).stream().anyMatch(element -> element.isDisplayed() && element.isEnabled()));
+	    By searchInput = By.name("search_text");
+	    WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput));
+	    searchBox.clear();
+	    searchBox.sendKeys(contactName);
 	
-	    WebElement visibleContact = driver.findElements(contactLink).stream().filter(element -> element.isDisplayed() && element.isEnabled()).findFirst().orElseThrow(() -> new NoSuchElementException(contactName));
+	    By searchButton = By.xpath("//input[@name='submit' or @value='Search Now']");
+	    wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
 	
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", visibleContact);visibleContact.click();
+	    // Open the matching Contact
+	    By contactLink = By.xpath(
+	            "//a[contains(@href,'module=Contacts')" +
+	            " and contains(@href,'action=DetailView')" +
+	            " and normalize-space(.)='" + contactName + "']");
 	
-	    // Open More Information tab
+	    WebElement visibleContact = wait.until(ExpectedConditions.elementToBeClickable(contactLink));
+	    visibleContact.click();
+	
+	    // Open More Information
 	    By moreInformationTab = By.xpath("//a[normalize-space()='More Information']");
 	    wait.until(ExpectedConditions.elementToBeClickable(moreInformationTab)).click();
 	
-	    // Expand the Projects related list
-	    By projectsLink = By.xpath("//a[contains(@href,'tbl_Contacts_Projects') " +"and contains(@href,'Contacts_Projects')]");
+	    // Locate and expand the Projects related list
+	    By projectsHeader = By.xpath("//a[contains(@href,'tbl_Contacts_Projects') " +"and contains(@href,'Contacts_Projects')]");
 	
-	    WebElement projectsHeader = wait.until(ExpectedConditions.presenceOfElementLocated(projectsLink));
+	    WebElement header = wait.until(ExpectedConditions.presenceOfElementLocated(projectsHeader));
 	
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", projectsHeader);
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", projectsHeader);
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", header);
 	
-	    // Wait for the Projects related-list section
-	    By relatedProjectsSection = By.xpath("//*[@id='tbl_Contacts_Projects']");
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(relatedProjectsSection));
+	    wait.until(ExpectedConditions.elementToBeClickable(projectsHeader));
 	
-	    // Verify the project in the contact's related list
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", header);
+	
+	    // Wait for the related-list container to be present
+	    By relatedProjectsSection = By.id("tbl_Contacts_Projects");
+	    wait.until(ExpectedConditions.presenceOfElementLocated(relatedProjectsSection));
+	
+	    // Verify the exact project name from Excel
 	    By projectLink = By.xpath(
-	        "//a[contains(@href,'module=Project')" +
-	        " and contains(@href,'action=DetailView')" +
-	        "and contains(normalize-space(.),'Customer Portal Login Resolution')]"
-	    );
+	            "//a[contains(@href,'module=Project')" +
+	            " and contains(@href,'action=DetailView')" +
+	            " and normalize-space(.)='" + projectName + "']");
 	
-	    List<WebElement> projectLinks = wait.until(driver -> {
+	    boolean isVerified = wait.until(driver -> {
 	        List<WebElement> links = driver.findElements(projectLink);
-	        return links.stream().anyMatch(WebElement::isDisplayed)
-	            ? links : null;
+	
+	        return links.stream().anyMatch(link -> {
+	            try {
+	                return link.isDisplayed()
+	                        && link.getText().trim().equals(projectName);
+	            } catch (StaleElementReferenceException e) {
+	                return false;
+	            }
+	        });
 	    });
 	
-	    boolean isVerified = projectLinks.stream().anyMatch(
-	        link -> link.isDisplayed()
-	            && link.getText().trim().equals(projectName)
-	    );
-	
-	    Assert.assertTrue(isVerified,"Project was not found in the Contact's related list: " + projectName);
-	
-	    System.out.println("Project verified in Contact's related list.");
+	    Assert.assertTrue(isVerified,"Project '" + projectName+ "' was not found in Contact '" + contactName+ "' related Projects list.");
+	    System.out.println("Project '" + projectName+ "' verified in Contact '" + contactName+ "' related list.");
 	}
+
 	
 
 	public void updateProjectProgress(String newProgress) {
